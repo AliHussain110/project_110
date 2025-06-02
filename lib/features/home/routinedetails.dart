@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:project_110/common/botton_widget.dart';
-import 'package:project_110/features/home/widgets/note_widget.dart';
-import 'package:project_110/features/home/widgets/vehicle_details_card.dart';
-import 'package:project_110/features/home/widgets/vehicle_header.dart';
-import 'package:project_110/theme/colors.dart';
-import 'package:project_110/theme/text_theme_style.dart';
-import 'package:project_110/utils/constants.dart';
+// import 'package:project_110/common/botton_widget.dart';
+import '/features/home/widgets/note_widget.dart';
+import '/features/home/widgets/vehicle_details_card.dart';
+import '/features/home/widgets/vehicle_header.dart';
+import '../../theme/colors.dart';
+import '../../theme/text_theme_style.dart';
+import '../../utils/constants.dart';
 
 import 'widgets/buttons.dart';
 

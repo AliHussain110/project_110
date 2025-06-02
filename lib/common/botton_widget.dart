@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../theme/text_theme_style.dart';
+// import '../../theme/text_theme_style.dart';
 import '../../theme/colors.dart';
 
 class ButtonWidget extends StatelessWidget {

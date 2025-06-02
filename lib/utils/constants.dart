@@ -1,5 +1,3 @@
-import "package:flutter/material.dart";
-
 class Constants {
   // paddings
   static const pageKpadding = 18;

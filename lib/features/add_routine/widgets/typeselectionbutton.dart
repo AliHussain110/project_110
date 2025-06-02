@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../theme/colors.dart';
 import '../../../theme/text_theme_style.dart';
-import '../../../utils/enum.dart';
+// import '../../../utils/enum.dart';
 
 class TypeSelection extends StatelessWidget {
   const TypeSelection({
