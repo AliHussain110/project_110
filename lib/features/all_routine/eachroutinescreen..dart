@@ -247,7 +247,20 @@ class EachTileWidget extends StatelessWidget {
         showBottomSheet(
           context: context,
           builder: (ctx) {
-            return DisplayScreenBottomSheet();
+            return DisplayScreenBottomSheet(
+              vehicalDate: "Monday, April 28, 2025",
+              vehicalNumber: 'LRJ 1404',
+              clientName: 'Abrar Butt',
+              driverName: 'Mohsin',
+              challan: '0',
+              fuel: '0',
+              outSource: 'No',
+              location: 'Light Room',
+              note: null,
+              status: 'Paid',
+              ammount: 10000,
+              clientFuel: 'Yes',
+            );
           },
         );
       },

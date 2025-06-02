@@ -7,7 +7,33 @@ import '../home/widgets/buttons.dart';
 import '../home/widgets/note_widget.dart';
 
 class DisplayScreenBottomSheet extends StatelessWidget {
-  const DisplayScreenBottomSheet({super.key});
+  const DisplayScreenBottomSheet({
+    super.key,
+    required this.vehicalDate,
+    required this.vehicalNumber,
+    required this.clientName,
+    required this.driverName,
+    required this.challan,
+    required this.fuel,
+    required this.outSource,
+    required this.location,
+    this.note,
+    required this.status,
+    required this.ammount,
+    required this.clientFuel,
+  });
+  final String vehicalDate;
+  final String vehicalNumber;
+  final String clientName;
+  final String driverName;
+  final String challan;
+  final String fuel;
+  final String outSource;
+  final String location;
+  final String? note;
+  final String status;
+  final String clientFuel;
+  final int ammount;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +54,7 @@ class DisplayScreenBottomSheet extends StatelessWidget {
         spacing: 12.w,
         children: [
           Text(
-            "Monday, April 28, 2025",
+            vehicalDate,
             style: AppTextStyles.displayMedium(fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -42,17 +68,17 @@ class DisplayScreenBottomSheet extends StatelessWidget {
                   spacing: 1.w,
                   children: [
                     Text(
-                      "Vehical No#",
+                      "Vehical No# $vehicalNumber",
                       style: AppTextStyles.displayMedium(fontSize: 22),
                     ),
                     Divider(thickness: 1),
-                    detailOfRoutine("Client", "Abrar Butt"),
-                    detailOfRoutine("Driver", "Mohsin"),
-                    detailOfRoutine("challan", "0"),
-                    detailOfRoutine("Fuel", "1000 Rs"),
-                    detailOfRoutine("Outsources", "yes"),
-                    detailOfRoutine("Clients Fuel", "yes"),
-                    Container(
+                    detailOfRoutine("Client", clientName),
+                    detailOfRoutine("Driver", driverName),
+                    detailOfRoutine("challan", '$challan Rs'),
+                    detailOfRoutine("Fuel", "$fuel Rs"),
+                    detailOfRoutine("Outsources", outSource),
+                    detailOfRoutine("Clients Fuel", clientFuel),
+                    SizedBox(
                       width: 1.0.sh,
                       height: 0.05.sh,
                       child: RichText(
@@ -63,7 +89,7 @@ class DisplayScreenBottomSheet extends StatelessWidget {
                               style: AppTextStyles.bodyLarge(),
                             ),
                             TextSpan(
-                              text: " Location here",
+                              text: location,
                               style: AppTextStyles.bodyMedium(),
                             ),
                           ],
@@ -82,7 +108,7 @@ class DisplayScreenBottomSheet extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12.w),
                         ),
                         child: Text(
-                          "Paid",
+                          status,
                           style: AppTextStyles.bodyMedium(
                             color: AppColors.inputFeildColor2,
                           ),
@@ -91,7 +117,7 @@ class DisplayScreenBottomSheet extends StatelessWidget {
                     ),
                     Divider(thickness: 1),
                     // feteched from home widget from details of daily routine
-                    NoteWidget(note: "Location"),
+                    NoteWidget(note: note ?? "No Note"),
                   ],
                 ),
               ),
@@ -100,7 +126,7 @@ class DisplayScreenBottomSheet extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: Text(
-              "10,000 Rs",
+              "$ammount Rs",
               style: AppTextStyles.displayMedium(
                 fontWeight: FontWeight.bold,
                 color: AppColors.primaryColor,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:project_110/features/add_routine/addroutine.dart';
 import 'package:project_110/features/all_routine/routinepage.dart';
+import 'package:project_110/features/clients/allclients.dart';
 import 'package:project_110/features/home/homescreen.dart';
 // import 'package:project_110/features/loginpage/loginpage.dart';
 import 'package:project_110/theme/colors.dart';
@@ -19,8 +21,8 @@ class _HomePageState extends State<HomePage> {
   List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     AllRoutinePage(),
-    Container(child: Text("data2")),
-    Container(child: Text("data3")),
+    AddDailyRoutine(),
+    AllClientsPage(),
     // Container(child: Text("data4")),
   ];
 

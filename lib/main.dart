@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_110/routes/routes.dart';
-import './features/homepage.dart';
 
 void main() {
   runApp(

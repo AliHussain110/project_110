@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../features/all_routine/eachroutinescreen..dart';
+import '../features/clients/bill.client.dart';
 import '../features/homepage.dart';
 
 final GoRouter router = GoRouter(
@@ -10,6 +11,12 @@ final GoRouter router = GoRouter(
       path: '/', // Splash Screen
       builder: (BuildContext context, GoRouterState state) {
         return HomePage();
+      },
+    ),
+    GoRoute(
+      path: '/eachClientBill', // Splash Screen
+      builder: (BuildContext context, GoRouterState state) {
+        return ClientBill();
       },
     ),
     GoRoute(
